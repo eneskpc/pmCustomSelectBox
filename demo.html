@@ -6,11 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PM Custom SelectBox</title>
+    <style>
+        .custom-selectbox-wrapper {
+            position: relative;
+        }
+
+        .custom-selectbox-wrapper .custom-selectbox-result-wrapper {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    
+    <input id="test" type="text">
     <script src="pmCustomSelectBox.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var asdc = new PmCustomSelectBox({
+                selector: 'test',
+                ajax: {
+                    url: '/WebServices/CustomSelectBox.asmx/GetDataByUNVANLAR'
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

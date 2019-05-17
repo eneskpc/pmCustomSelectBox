@@ -1,0 +1,67 @@
+﻿.custom-selectbox-wrapper {
+    position: relative;
+    box-sizing: border-box;
+}
+
+    .custom-selectbox-wrapper * {
+        box-sizing: border-box;
+    }
+
+    .custom-selectbox-wrapper > input {
+        position: relative;
+        width: 100%;
+        padding: 4px 2px 4px 2px;
+        border-radius: 5px;
+        border: 1px solid #9F9F9F;
+    }
+
+    .custom-selectbox-wrapper > .custom-selectbox-result-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        min-width: 100%;
+        z-index: 9;
+        max-height: 350px;
+        overflow: hidden auto;
+    }
+
+        .custom-selectbox-wrapper > .custom-selectbox-result-wrapper > a {
+            display: block;
+            padding: 5px 10px;
+            transition: 0.1s all;
+            color: #333 !important;
+            white-space: nowrap;
+            border-bottom: 1px solid #ddd;
+        }
+
+            .custom-selectbox-wrapper > .custom-selectbox-result-wrapper > a.custom-selectbox-new-item {
+                background-color: #FEFFCF;
+            }
+
+            .custom-selectbox-wrapper > .custom-selectbox-result-wrapper > a:hover,
+            .custom-selectbox-wrapper > .custom-selectbox-result-wrapper > a:focus {
+                background-color: #FF8800 !important;
+                color: #fff !important;
+            }
+
+    .custom-selectbox-wrapper > input:disabled {
+        padding-right: 25px;
+    }
+
+    .custom-selectbox-wrapper .cancel-button {
+        color: darkred;
+        position: absolute;
+        top: 0;
+        right: 5px;
+        background: none;
+        border: none;
+        outline: 0;
+        z-index: 9;
+        font-size: 20px;
+    }
+
+    .custom-selectbox-wrapper .hide {
+        display: none;
+    }
